@@ -50,4 +50,5 @@ end
 
 function result = isNearlyEqualToZero(value)
 result = abs(value) < eps;
+
 end

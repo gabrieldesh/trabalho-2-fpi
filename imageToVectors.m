@@ -1,6 +1,8 @@
-function vectorList = imageToVectors(Image, blockSize)
+function [vectorList, originalImageSize] = imageToVectors(Image, blockSize)
 
 [numLines, numColumns] = size(Image);
+originalImageSize = [numLines, numColumns];
+
 numBlockLines = ceil(numLines / blockSize);
 numBlockColumns = ceil(numColumns / blockSize);
 
@@ -35,5 +37,6 @@ for i = 1:blockSize:numLines
         vectorListIndex = vectorListIndex + 1;
     end
 end
+
 end
 
