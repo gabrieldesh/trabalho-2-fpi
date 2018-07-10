@@ -1,6 +1,6 @@
 function [means, assignments] = kMeans(K, vectorList)
 
-iterationLimit = 1000;
+iterationLimit = 20;
 
 % Picks K initial means from vectorList at random, without replacement.
 means = datasample(vectorList, K, 'Replace', false);
@@ -50,5 +50,4 @@ end
 
 function result = isNearlyEqualToZero(value)
 result = abs(value) < eps;
-
 end
